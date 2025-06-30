@@ -210,9 +210,25 @@
     </form>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Jeison – DevOps Engineer. All rights reserved.</p>
-  </footer>
+<footer class="footer">
+  <p>Connect with me:</p>
+  <div class="social-icons">
+    <a href="https://github.com/jeison-it" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a> |
+    <a href="mailto:you@example.com">Email</a>
+  </div>
+  <p>&copy; 2025 Jeison – DevOps Engineer. All rights reserved.</p>
+</footer>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString();
+    document.getElementById("clock").textContent = timeStr;
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+</script>
 
 </body>
 </html>

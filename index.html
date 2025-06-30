@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Projects</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #121212;
+      color: #f0f0f0;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeSlideDown 1s ease-out;
+    }
+
+    @keyframes fadeSlideDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      transform: scale(1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInCard 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+    }
+
+    @keyframes fadeInCard {
+      to { opacity: 1; }
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h3 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .contact {
+      background: #1a1a1a;
+      padding: 2rem;
+      max-width: 600px;
+      margin: 3rem auto;
+      border-radius: 10px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .contact h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact input, .contact textarea {
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      background: #2a2a2a;
+      border: 1px solid #444;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .contact button {
+      background: #4caf50;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact button:hover {
+      background: #45a049;
+    }
+
+    footer {
+      background: #1f1f1f;
+      text-align: center;
+      padding: 1rem;
+      color: #888;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Projects</h1>
+    <p>Welcome to my personal portfolio website</p>
+  </header>
+
+  <section class="projects">
+    <div class="card" style="animation-delay: 0.1s;">
+      <img src="https://via.placeholder.com/300x150" alt="Project 1">
+      <div class="card-content">
+        <h3>Project One</h3>
+        <p>Responsive layout using HTML, CSS, and JS.</p>
+      </div>
+    </div>
+    <div class="card" style="animation-delay: 0.3s;">
+      <img src="https://via.placeholder.com/300x150" alt="Project 2">
+      <div class="card-content">
+        <h3>Project Two</h3>
+        <p>Node.js and MongoDB-based REST API service.</p>
+      </div>
+    </div>
+    <div class="card" style="animation-delay: 0.5s;">
+      <img src="https://via.placeholder.com/300x150" alt="Project 3">
+      <div class="card-content">
+        <h3>Project Three</h3>
+        <p>React frontend that connects to a public weather API.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:your@email.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Nii Ayitey Jeison. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

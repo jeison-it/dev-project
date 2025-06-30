@@ -3,63 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Projects</title>
+  <title>DevOps Projects Portfolio</title>
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --primary: #00c9a7;
+      --accent: #0078ff;
+      --bg: #f0f4f8;
+      --text: #333;
     }
 
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #121212;
-      color: #f0f0f0;
-      animation: fadeIn 1s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      background: linear-gradient(to right, #f0f4f8, #e6e9f0);
+      color: var(--text);
     }
 
     header {
-      background-color: #1f1f1f;
-      padding: 2rem;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 3rem 2rem;
       text-align: center;
-      animation: fadeSlideDown 1s ease-out;
     }
 
-    @keyframes fadeSlideDown {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
       padding: 2rem;
       max-width: 1200px;
       margin: auto;
     }
 
     .card {
-      background: #1e1e1e;
+      background: white;
       border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      transform: scale(1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeInCard 0.8s ease forwards;
+      animation: fadeIn 1s ease forwards;
       opacity: 0;
     }
 
     .card:hover {
       transform: scale(1.03);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     }
 
-    @keyframes fadeInCard {
+    @keyframes fadeIn {
       to { opacity: 1; }
     }
 
@@ -74,26 +75,27 @@
     }
 
     .card-content h3 {
-      margin: 0 0 0.5rem 0;
+      color: var(--accent);
+      margin: 0 0 0.5rem;
     }
 
     .card-content p {
-      font-size: 0.9rem;
-      color: #ccc;
+      font-size: 0.95rem;
+      color: #555;
     }
 
     .contact {
-      background: #1a1a1a;
+      background: #ffffffcc;
       padding: 2rem;
       max-width: 600px;
       margin: 3rem auto;
-      border-radius: 10px;
-      animation: fadeIn 1.2s ease;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .contact h2 {
-      margin-top: 0;
       text-align: center;
+      color: var(--accent);
     }
 
     .contact form {
@@ -101,66 +103,73 @@
       flex-direction: column;
     }
 
-    .contact input, .contact textarea {
-      padding: 0.75rem;
+    .contact input,
+    .contact textarea {
+      padding: 0.9rem;
       margin-bottom: 1rem;
-      background: #2a2a2a;
-      border: 1px solid #444;
-      color: white;
-      border-radius: 5px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
     }
 
     .contact button {
-      background: #4caf50;
+      background: var(--primary);
       color: white;
-      padding: 0.75rem;
       border: none;
-      border-radius: 5px;
+      padding: 1rem;
+      border-radius: 6px;
+      font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
       transition: background 0.3s ease;
     }
 
     .contact button:hover {
-      background: #45a049;
+      background: #009c84;
     }
 
     footer {
-      background: #1f1f1f;
+      background: var(--accent);
+      color: white;
       text-align: center;
       padding: 1rem;
-      color: #888;
-      animation: fadeIn 1.2s ease-in-out;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>My Projects</h1>
-    <p>Welcome to my personal portfolio website</p>
+    <h1>DevOps Project Portfolio</h1>
+    <p>Showcasing automation, infrastructure, and CI/CD solutions</p>
   </header>
 
   <section class="projects">
-    <div class="card" style="animation-delay: 0.1s;">
-      <img src="https://via.placeholder.com/300x150" alt="Project 1">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150/00c9a7/ffffff?text=CI/CD+Pipeline" alt="CI/CD Pipeline">
       <div class="card-content">
-        <h3>Project One</h3>
-        <p>Responsive layout using HTML, CSS, and JS.</p>
+        <h3>CI/CD with GitHub Actions</h3>
+        <p>Automated build, test, and deployment using GitHub Actions for a containerized app.</p>
       </div>
     </div>
-    <div class="card" style="animation-delay: 0.3s;">
-      <img src="https://via.placeholder.com/300x150" alt="Project 2">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150/0078ff/ffffff?text=Terraform+AWS" alt="Terraform AWS">
       <div class="card-content">
-        <h3>Project Two</h3>
-        <p>Node.js and MongoDB-based REST API service.</p>
+        <h3>Infrastructure as Code</h3>
+        <p>Provisioned secure, scalable AWS resources with Terraform and managed modules.</p>
       </div>
     </div>
-    <div class="card" style="animation-delay: 0.5s;">
-      <img src="https://via.placeholder.com/300x150" alt="Project 3">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150/5c6bc0/ffffff?text=Kubernetes" alt="Kubernetes">
       <div class="card-content">
-        <h3>Project Three</h3>
-        <p>React frontend that connects to a public weather API.</p>
+        <h3>Kubernetes Cluster</h3>
+        <p>Deployed microservices with Helm on a production-ready Kubernetes cluster with monitoring.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150/fbc02d/000000?text=Ansible+Automation" alt="Ansible Automation">
+      <div class="card-content">
+        <h3>Server Automation</h3>
+        <p>Used Ansible playbooks to configure NGINX, users, SSH, and firewall on Ubuntu VMs.</p>
       </div>
     </div>
   </section>
@@ -176,8 +185,9 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Nii Ayitey Jeison. All rights reserved.</p>
+    <p>&copy; 2025 Jeison – DevOps Engineer. All rights reserved.</p>
   </footer>
 
 </body>
 </html>
+

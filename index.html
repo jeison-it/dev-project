@@ -219,16 +219,30 @@
   </div>
   <p>&copy; 2025 Jeison – DevOps Engineer. All rights reserved.</p>
 </footer>
+<nav class="navbar">
+  <h1>DevOps Projects</h1>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div id="clock"></div> 
+</nav>
 
-<script>
+  <script>
   function updateClock() {
     const now = new Date();
     const timeStr = now.toLocaleTimeString();
-    document.getElementById("clock").textContent = timeStr;
+    const clock = document.getElementById("clock");
+    if (clock) {
+      clock.textContent = timeStr;
+    }
   }
-  setInterval(updateClock, 1000);
-  updateClock();
+
+  updateClock(); // Run immediately
+  setInterval(updateClock, 1000); // Then every second
 </script>
+
 
 </body>
 </html>

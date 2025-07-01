@@ -134,6 +134,50 @@
       text-align: center;
       padding: 1rem;
     }
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #1f1f1f;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#clock {
+  font-family: monospace;
+  font-size: 14px;
+}
+
   </style>
 </head>
 <body>
@@ -219,9 +263,10 @@
   </div>
   <p>&copy; 2025 Jeison – DevOps Engineer. All rights reserved.</p>
 </footer>
-                                        <nav class="navbar">
-                                        <div id="clock"></div> 
-                                                </nav>
+<nav class="navbar">
+  <div class="nav-center" id="clock"></div>
+<div id="clock"></div> 
+</nav>
 
   <script>
   function updateClock() {
